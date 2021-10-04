@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": ["import", "prettier"],
+  "extends": ["eslint:recommended", "@react/airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "consistent-return": "off",
+    "no-return-await": "off",
+    "no-plusplus": "off",
+    "no-unused-vars": "warn",
+    "class-methods-use-this": ["error", { "exceptMethods": ["data"] }],
+    "no-shadow": ["error", { "allow": ["state", "getters"] }],
+    "no-param-reassign": ["error", { "props": false }],
+    "func-names": ["error", "as-needed"],
+    "import/extensions": [
+      "warn",
+      {
+        ".js": "never",
+        ".jsx": "never",
+        ".mjs": "never",
+        ".ts": "never",
+        ".tsx": "never",
+        ".vue": "never"
+      }
+    ],
+    "prettier/prettier": ["error"]
+  },
+
+  "overrides": [
+    {
+      "files": ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
