@@ -1,0 +1,7 @@
+@import 'codemirror/lib/codemirror.css';
+@import 'codemirror/theme/material.css';
+@import './dracula.css';
+
+.CodeMirror-code {
+  font-size: 16px;
+}
